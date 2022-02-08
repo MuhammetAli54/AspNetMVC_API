@@ -11,6 +11,7 @@ using HttpPostAttribute = System.Web.Http.HttpPostAttribute;
 
 namespace AspNetMVC_API.Controllers
 {
+    [System.Web.Http.RoutePrefix("api/urun")]
     public class StudentController : ApiController
     {
         //Global alan
@@ -64,6 +65,8 @@ namespace AspNetMVC_API.Controllers
                 };
             }
         }
+
+        [System.Web.Http.Route("detay/{id:int:min(1)}")]
 
         public ResponseData GetDetail(int id)
         {
